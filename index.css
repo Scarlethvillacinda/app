@@ -1,0 +1,145 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	/* 1 */
+	border-width: 0;
+	/* 2 */
+	border-style: solid;
+	/* 2 */
+	border-color: #e5e7eb;
+	/* 2 */
+}
+:root {
+	--white: #fafafb;
+	--purple:#100423;
+	--blue-light:#1d5854;
+	--blue-dark:#2a73c2;
+	--green: #2c7b90;
+ 
+ }
+ 
+ body {
+	 background: linear-gradient(to bottom,var(--purple),var(--blue-light));
+	 height: 100vh;   
+	 font-family: 'Prompt', sans-serif;
+ }
+
+
+
+/* Barra de navegacion */
+#nav-bar {
+	height: 4rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: blue;
+}
+
+#nav-bar-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: inherit;
+	background-color: rgb(34, 0, 255);
+	padding: 0 1rem;
+	max-width: 80rem;
+	margin: 0 auto;
+}
+#nav-bar-container > h2 {
+	margin: 0;
+	color: white;
+}
+
+#menu-icon {
+	width: 2rem;
+	height: 2rem;
+	color: white;
+	border: 2px solid white;
+	border-radius: 0.5rem;
+}
+#menu-icon:active {
+	background-color: white;
+	color: rgb(43, 0, 255);
+}
+
+.link {
+	color: white;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+#links-container {
+	display: none;
+	gap: 2rem;
+}
+/*Fin Barra de Navegacion */
+
+/* Contenido */
+#main-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 1rem;
+	gap: 1rem;
+	max-width: 80rem;
+	margin: 0 auto;
+	width: 8;
+}
+#main-title {
+	margin: 0;
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+#desc-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+#desc-text {
+	margin: 0;
+	text-align: justify;
+}
+#desc-link {
+	background-color: rgb(11, 11, 199);
+	padding: 0.5rem 1rem;
+	border-radius: 0.375rem;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: white;
+	cursor: pointer;
+	transition: all 0.175s ease-in-out;
+	text-decoration: none;
+}
+#desc-link:hover {
+	background-color: rgb(40, 49, 226);
+}
+
+@media (min-width: 768px) {
+	#menu-icon {
+		display: none;
+	}
+
+	#links-container {
+		display: flex;
+	}
+	#main-container {
+		flex-direction: row;
+		align-items: center;
+	}
+	#main-title {
+		width: 50%;
+		font-size: 4rem;
+	}
+	#desc-container {
+		width: 50%;
+	}
+}
